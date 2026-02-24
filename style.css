@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(-45deg, #6a11bc,#2575fc, #ff6ec4, #f7971e);
+    background-size:400% 400% ;
+    animation: gradientMove 12s ease infinite;
+}
+
+@keyframes gradientMove {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+.container{
+    background: rgba(17, 17, 17, 0.1);
+    padding: 40px;
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 18px 20px rgb(0,0,0,0.3);
+    text-align: center;
+    color: #ffffff;
+    width: 400px;
+}
+
+h1{
+    margin-bottom: 25px;
+}
+
+.input-box{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+input{
+    flex: 1;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+
+button{
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background: linear-gradient(45deg,#00f5a0, #00d9f5 );
+    color: black;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+button:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #00f5a0;
+}
+
+#result {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.show{
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(10px);}
+    to  {opacity: 1; transform: translateY(0);}
+}
